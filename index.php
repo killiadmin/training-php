@@ -1,6 +1,5 @@
 <?php 
-    session_start();
-    require("actions/users/checkSessionAction.php");
+require("actions/users/checkSessionAction.php");
 ?>
 
 <!DOCTYPE html>

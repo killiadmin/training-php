@@ -1,7 +1,7 @@
 <?php 
 
-    require('actions/message/profilAction.php');
-    require('actions/users/checkSessionAction.php') 
+require('actions/users/checkSessionAction.php'); 
+require('actions/message/profilAction.php');
 
 ?>
 <!DOCTYPE html>
@@ -20,8 +20,12 @@
                     <h5 class="card-title"><?= $messages['title'] ?></h5>
                     <p class="card-text"><?= $messages['message'] ?></p>
                     </div>
+                    <div class="container m-2">
                     <a href="#" class="btn btn-primary">Répondre</a>
-                    <a href="put-message.php" class="btn btn-secondary">Modifier</a>
+                    <a href="put-message.php?id=<?=$messages['id']?>" class="btn btn-secondary">Modifier</a>
+                    <a href="#" class="btn btn-danger">Supprimer</a>
+                    </div>
+
 
                 </div>
             <?php

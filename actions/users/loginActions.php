@@ -1,14 +1,16 @@
 <?php
-
+session_start();
+//Connection à la base de données
 require('actions/database.php');
 
+//Si l'input 'validate est appelé'
 if (isset($_POST["validate"])){
 
-    //Valide les champs si ils ne sont pas vide 
+    //Valide les champs si ils ne sont pas vides 
 
     if(!empty($_POST["nickname"]) && !empty($_POST["password"])) {
 
-        //Récupère les données de l'utilisateur
+        //Récupère les données de l'utilisateur qu'il a rentrer dans les champs
 
         $user_nickname = htmlspecialchars($_POST["nickname"]);
         $user_password = htmlspecialchars($_POST["password"]);
