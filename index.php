@@ -32,6 +32,9 @@
                         <div class="card-body">
                             <?= $message['message']?>
                         </div>
+                        <div class="card-body">
+                            <a href="view-message.php?id=<?= $message['id'] ;?>" class="btn btn-primary">Afficher</a>
+                        </div>
                         <div class="card-footer">
 
                             Publié par <?= $message['nickname_author']; ?> le <?= $message['date_message'];?>

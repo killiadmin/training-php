@@ -15,8 +15,8 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 
     if($checkMessageExists->rowCount() > 0){
 
-        $userInfos = $checkMessageExists->fetch();
-        if ($userInfos['id_author'] == $_SESSION['id']) {
+        $messageInfos = $checkMessageExists->fetch();
+        if ($messageInfos['id_author'] == $_SESSION['id']) {
 
             $deleleThisMessage = $db->prepare('DELETE FROM message WHERE id = ?');
             $deleleThisMessage->execute(array($idMessage));
