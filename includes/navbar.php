@@ -11,9 +11,17 @@
         <li class="nav-item">
           <a class="nav-link" href="post-message.php">Write a message</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="actions/users/logoutActions.php">Sign out</a>
-        </li>
+
+        <?php 
+          if(isset($_SESSION['auth'])){
+          ?>
+            <li class="nav-item">
+              <a class="nav-link" href="actions/users/logoutActions.php">Sign out</a>
+            </li>
+          <?php
+          };
+        ?>
+        
       </ul>
     </div>
   </div>
