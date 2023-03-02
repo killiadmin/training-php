@@ -23,10 +23,8 @@ require('actions/message/profilAction.php');
                     <div class="container m-2">
                     <a href="#" class="btn btn-primary">Répondre</a>
                     <a href="put-message.php?id=<?=$messages['id']?>" class="btn btn-secondary">Modifier</a>
-                    <a href="#" class="btn btn-danger">Supprimer</a>
+                    <a href="actions/message/deleteMessageAction.php?id=<?=$messages['id']?>" class="btn btn-danger">Supprimer</a>
                     </div>
-
-
                 </div>
             <?php
         }

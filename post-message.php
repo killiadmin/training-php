@@ -1,8 +1,7 @@
 <?php 
 
-require("actions/message/sendMessageAction.php");
 require("actions/users/checkSessionAction.php"); 
-
+require("actions/message/sendMessageAction.php");
 
 ?>
 <!DOCTYPE html>
